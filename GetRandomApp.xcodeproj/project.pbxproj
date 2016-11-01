@@ -11,8 +11,31 @@
 		8531F0871DC4ABF500D47F31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531F0861DC4ABF500D47F31 /* ViewController.swift */; };
 		8531F08A1DC4ABF500D47F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8531F0881DC4ABF500D47F31 /* Main.storyboard */; };
 		8531F08C1DC4ABF500D47F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8531F08B1DC4ABF500D47F31 /* Assets.xcassets */; };
-		8531F08F1DC4ABF500D47F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8531F08D1DC4ABF500D47F31 /* LaunchScreen.storyboard */; };
+		854613511DC4AF1100ACF869 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531F0971DC4AD4000D47F31 /* Kanna.framework */; };
+		854613521DC4AF1100ACF869 /* Kanna.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8531F0971DC4AD4000D47F31 /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		854613561DC4B04900ACF869 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854613541DC4B04900ACF869 /* RecentTableViewCell.swift */; };
+		854613571DC4B04900ACF869 /* RecentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 854613551DC4B04900ACF869 /* RecentTableViewCell.xib */; };
+		854613591DC4B05F00ACF869 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854613581DC4B05F00ACF869 /* RecentsViewController.swift */; };
+		8546135B1DC4B16000ACF869 /* nothing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8546135A1DC4B16000ACF869 /* nothing.png */; };
+		8572D2D01DC60DF200779C4F /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */; };
+		8572D2D11DC60DF200779C4F /* CoreActionSheetPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		859A25EB1DC5A3FB0074D187 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859A25EA1DC5A3FB0074D187 /* SlideMenuController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		854613531DC4AF1100ACF869 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				854613521DC4AF1100ACF869 /* Kanna.framework in Embed Frameworks */,
+				8572D2D11DC60DF200779C4F /* CoreActionSheetPicker.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8531F0811DC4ABF500D47F31 /* GetRandomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRandomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,8 +43,14 @@
 		8531F0861DC4ABF500D47F31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8531F0891DC4ABF500D47F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8531F08B1DC4ABF500D47F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8531F08E1DC4ABF500D47F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8531F0901DC4ABF500D47F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8531F0971DC4AD4000D47F31 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
+		854613541DC4B04900ACF869 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
+		854613551DC4B04900ACF869 /* RecentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentTableViewCell.xib; sourceTree = "<group>"; };
+		854613581DC4B05F00ACF869 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
+		8546135A1DC4B16000ACF869 /* nothing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nothing.png; sourceTree = "<group>"; };
+		8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = Carthage/Build/iOS/CoreActionSheetPicker.framework; sourceTree = "<group>"; };
+		859A25EA1DC5A3FB0074D187 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				854613511DC4AF1100ACF869 /* Kanna.framework in Frameworks */,
+				8572D2D01DC60DF200779C4F /* CoreActionSheetPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +71,7 @@
 			children = (
 				8531F0831DC4ABF500D47F31 /* GetRandomApp */,
 				8531F0821DC4ABF500D47F31 /* Products */,
+				8531F0961DC4AD4000D47F31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +86,27 @@
 		8531F0831DC4ABF500D47F31 /* GetRandomApp */ = {
 			isa = PBXGroup;
 			children = (
+				859A25EA1DC5A3FB0074D187 /* SlideMenuController.swift */,
+				8546135A1DC4B16000ACF869 /* nothing.png */,
 				8531F0841DC4ABF500D47F31 /* AppDelegate.swift */,
 				8531F0861DC4ABF500D47F31 /* ViewController.swift */,
+				854613581DC4B05F00ACF869 /* RecentsViewController.swift */,
+				854613541DC4B04900ACF869 /* RecentTableViewCell.swift */,
+				854613551DC4B04900ACF869 /* RecentTableViewCell.xib */,
 				8531F0881DC4ABF500D47F31 /* Main.storyboard */,
 				8531F08B1DC4ABF500D47F31 /* Assets.xcassets */,
-				8531F08D1DC4ABF500D47F31 /* LaunchScreen.storyboard */,
 				8531F0901DC4ABF500D47F31 /* Info.plist */,
 			);
 			path = GetRandomApp;
+			sourceTree = "<group>";
+		};
+		8531F0961DC4AD4000D47F31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */,
+				8531F0971DC4AD4000D47F31 /* Kanna.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +119,8 @@
 				8531F07D1DC4ABF500D47F31 /* Sources */,
 				8531F07E1DC4ABF500D47F31 /* Frameworks */,
 				8531F07F1DC4ABF500D47F31 /* Resources */,
+				8531F0991DC4AD4F00D47F31 /* ShellScript */,
+				854613531DC4AF1100ACF869 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -91,7 +138,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Family Account";
 				TargetAttributes = {
 					8531F0801DC4ABF500D47F31 = {
@@ -124,7 +171,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8531F08F1DC4ABF500D47F31 /* LaunchScreen.storyboard in Resources */,
+				854613571DC4B04900ACF869 /* RecentTableViewCell.xib in Resources */,
+				8546135B1DC4B16000ACF869 /* nothing.png in Resources */,
 				8531F08C1DC4ABF500D47F31 /* Assets.xcassets in Resources */,
 				8531F08A1DC4ABF500D47F31 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +180,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8531F0991DC4AD4F00D47F31 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework ",
+				"$(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework ",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8531F07D1DC4ABF500D47F31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8531F0871DC4ABF500D47F31 /* ViewController.swift in Sources */,
+				859A25EB1DC5A3FB0074D187 /* SlideMenuController.swift in Sources */,
+				854613591DC4B05F00ACF869 /* RecentsViewController.swift in Sources */,
+				854613561DC4B04900ACF869 /* RecentTableViewCell.swift in Sources */,
 				8531F0851DC4ABF500D47F31 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +220,6 @@
 				8531F0891DC4ABF500D47F31 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8531F08D1DC4ABF500D47F31 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8531F08E1DC4ABF500D47F31 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -182,6 +243,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -231,6 +293,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -260,6 +323,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3X7LEN654Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GetRandomApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyoya.GetRandomApp;
@@ -273,6 +340,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3X7LEN654Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GetRandomApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kyoya.GetRandomApp;
@@ -300,6 +371,7 @@
 				8531F0951DC4ABF500D47F31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

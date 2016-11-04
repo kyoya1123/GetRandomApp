@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850B60531DCA1B1500C4C847 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850B60521DCA1B1500C4C847 /* SystemConfiguration.framework */; };
+		850B605B1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850B605A1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift */; };
 		8531F0851DC4ABF500D47F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531F0841DC4ABF500D47F31 /* AppDelegate.swift */; };
 		8531F0871DC4ABF500D47F31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531F0861DC4ABF500D47F31 /* ViewController.swift */; };
 		8531F08A1DC4ABF500D47F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8531F0881DC4ABF500D47F31 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		850B60521DCA1B1500C4C847 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		850B605A1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckReachabilityViewController.swift; sourceTree = "<group>"; };
 		8531F0811DC4ABF500D47F31 /* GetRandomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRandomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8531F0841DC4ABF500D47F31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8531F0861DC4ABF500D47F31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				850B60531DCA1B1500C4C847 /* SystemConfiguration.framework in Frameworks */,
 				854613511DC4AF1100ACF869 /* Kanna.framework in Frameworks */,
 				8572D2D01DC60DF200779C4F /* CoreActionSheetPicker.framework in Frameworks */,
 			);
@@ -86,11 +91,12 @@
 		8531F0831DC4ABF500D47F31 /* GetRandomApp */ = {
 			isa = PBXGroup;
 			children = (
-				859A25EA1DC5A3FB0074D187 /* SlideMenuController.swift */,
 				8546135A1DC4B16000ACF869 /* nothing.png */,
+				859A25EA1DC5A3FB0074D187 /* SlideMenuController.swift */,
 				8531F0841DC4ABF500D47F31 /* AppDelegate.swift */,
 				8531F0861DC4ABF500D47F31 /* ViewController.swift */,
 				854613581DC4B05F00ACF869 /* RecentsViewController.swift */,
+				850B605A1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift */,
 				854613541DC4B04900ACF869 /* RecentTableViewCell.swift */,
 				854613551DC4B04900ACF869 /* RecentTableViewCell.xib */,
 				8531F0881DC4ABF500D47F31 /* Main.storyboard */,
@@ -103,6 +109,7 @@
 		8531F0961DC4AD4000D47F31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				850B60521DCA1B1500C4C847 /* SystemConfiguration.framework */,
 				8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */,
 				8531F0971DC4AD4000D47F31 /* Kanna.framework */,
 			);
@@ -205,6 +212,7 @@
 			files = (
 				8531F0871DC4ABF500D47F31 /* ViewController.swift in Sources */,
 				859A25EB1DC5A3FB0074D187 /* SlideMenuController.swift in Sources */,
+				850B605B1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift in Sources */,
 				854613591DC4B05F00ACF869 /* RecentsViewController.swift in Sources */,
 				854613561DC4B04900ACF869 /* RecentTableViewCell.swift in Sources */,
 				8531F0851DC4ABF500D47F31 /* AppDelegate.swift in Sources */,

@@ -72,9 +72,19 @@ class RecentsViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        if CheckReachability(host_name: "google.com") {
         let storeUrl: URL = URL(string: reversedURLsArray[indexPath.row])!
         if UIApplication.shared.canOpenURL(storeUrl){
             UIApplication.shared.open(storeUrl, options: [:])
+        }
+        }else{
+            let alertController = UIAlertController(title: "インターネット未接続", message: "本アプリはインターネットに\n接続されていない状態で\n使用することは出来ません。", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
         }
     }
     

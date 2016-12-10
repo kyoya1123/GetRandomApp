@@ -21,7 +21,6 @@
 		8546135B1DC4B16000ACF869 /* nothing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8546135A1DC4B16000ACF869 /* nothing.png */; };
 		8572D2D01DC60DF200779C4F /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */; };
 		8572D2D11DC60DF200779C4F /* CoreActionSheetPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		859A25EB1DC5A3FB0074D187 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859A25EA1DC5A3FB0074D187 /* SlideMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,7 +53,6 @@
 		854613581DC4B05F00ACF869 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
 		8546135A1DC4B16000ACF869 /* nothing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nothing.png; sourceTree = "<group>"; };
 		8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = Carthage/Build/iOS/CoreActionSheetPicker.framework; sourceTree = "<group>"; };
-		859A25EA1DC5A3FB0074D187 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				8546135A1DC4B16000ACF869 /* nothing.png */,
-				859A25EA1DC5A3FB0074D187 /* SlideMenuController.swift */,
 				8531F0841DC4ABF500D47F31 /* AppDelegate.swift */,
 				8531F0861DC4ABF500D47F31 /* ViewController.swift */,
 				854613581DC4B05F00ACF869 /* RecentsViewController.swift */,
@@ -211,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8531F0871DC4ABF500D47F31 /* ViewController.swift in Sources */,
-				859A25EB1DC5A3FB0074D187 /* SlideMenuController.swift in Sources */,
 				850B605B1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift in Sources */,
 				854613591DC4B05F00ACF869 /* RecentsViewController.swift in Sources */,
 				854613561DC4B04900ACF869 /* RecentTableViewCell.swift in Sources */,

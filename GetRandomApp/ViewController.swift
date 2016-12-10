@@ -34,21 +34,9 @@ class ViewController: UIViewController {
     var dataOfImages: [Data] = []
     let categoryArray: [String] = ["全てのカテゴリ","ブック","ビジネス","カタログ","教育","エンターテイメント","ファイナンス","フード・ドリンク","ゲーム","ヘルスケア・フィットネス","ライフスタイル","雑誌・新聞","メディカル","ミュージック","ナビゲーション","ニュース","写真・ビデオ","仕事効率化","辞書・辞典・その他","ショッピング","ソーシャルネットワーキング","スポーツ","旅行","ユーティリティ","天気"]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if CheckReachability(host_name: "google.com") {
-        } else {
-            self.selectBtn.isEnabled = false
-            let alertController = UIAlertController(title: "インターネット未接続", message: "本アプリはインターネットに\n接続されていない状態で\n使用することは出来ません。", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            present(alertController, animated: true, completion: nil)
-            
-        }
         
         appTitleLabel.numberOfLines = 0
         searchBtn.layer.cornerRadius = 10
@@ -73,17 +61,22 @@ class ViewController: UIViewController {
         }
         
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if selectBtn.titleLabel?.text == "カテゴリ：未選択"{
             searchBtn.isEnabled = false
             searchBtn.backgroundColor = UIColor(red:0.82, green:0.82, blue:0.82, alpha:1.00)
         }
+        
     }
     
     
     
     @IBAction func search(){
+        
+        if CheckReachability(host_name: "google.com") {
+
         searchBtn.isEnabled = false
         searchBtn.backgroundColor = UIColor(red:0.82, green:0.82, blue:0.82, alpha:1.00)
         dispatch_async_global {
@@ -148,11 +141,29 @@ class ViewController: UIViewController {
                 }
             }
         }
+        }else {
+            let alertController = UIAlertController(title: "インターネット未接続", message: "本アプリはインターネットに\n接続されていない状態で\n使用することは出来ません。", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        }
     }
     //storeで見る
     @IBAction func show(){
+        if CheckReachability(host_name: "google.com") {
         if UIApplication.shared.canOpenURL(storeURL){
             UIApplication.shared.open(storeURL, options: [:])
+        }
+        }else{
+            let alertController = UIAlertController(title: "インターネット未接続", message: "本アプリはインターネットに\n接続されていない状態で\n使用することは出来ません。", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
         }
     }
     //カテゴリの選択

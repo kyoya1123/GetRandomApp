@@ -10,7 +10,7 @@
 import UIKit
 
 class RecentsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+    
     @IBOutlet var table: UITableView!
     let label = UILabel()
     
@@ -23,7 +23,9 @@ class RecentsViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.navigationItem.title = NSLocalizedString("title2", comment: "")
+        
         table.register(UINib(nibName: "RecentTableViewCell", bundle: nil), forCellReuseIdentifier:
             "Cell")
         table.delegate = self
@@ -35,6 +37,8 @@ class RecentsViewController: UIViewController,UITableViewDelegate,UITableViewDat
         super.viewWillAppear(animated)
         
         if save.object(forKey: "titles") != nil {
+            
+            //データ読み込み
             table.backgroundColor = UIColor.white
             label.text = ""
             URLsArray = save.object(forKey: "URLs") as! [String]
@@ -45,14 +49,15 @@ class RecentsViewController: UIViewController,UITableViewDelegate,UITableViewDat
             reversedImagesArray = imagesArray.reversed()
         }else if save.object(forKey: "titles") == nil{
             
-                label.frame = CGRect(x: 83, y: 265, width: 155, height: 39)
-                label.textAlignment = NSTextAlignment.center
-                label.font = UIFont(name: "System", size: 20)
-                label.text = "履歴はありません"
-                label.textColor = UIColor.lightGray
-                table.backgroundColor = UIColor(red:0.87, green:0.87, blue:0.87, alpha:0.5)
-                table.backgroundView = label
-        
+            //データがない時の背景
+            label.frame = CGRect(x: 83, y: 265, width: 155, height: 39)
+            label.textAlignment = NSTextAlignment.center
+            label.font = UIFont(name: "System", size: 20)
+            label.text = NSLocalizedString("record", comment: "")
+            label.textColor = UIColor.lightGray
+            table.backgroundColor = UIColor(red:0.87, green:0.87, blue:0.87, alpha:0.5)
+            table.backgroundView = label
+            
         }
         self.table.tableFooterView = UIView()
         table.reloadData()
@@ -66,20 +71,25 @@ class RecentsViewController: UIViewController,UITableViewDelegate,UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RecentTableViewCell
         cell.appTitleLabel.text = reversedTitlesArray[indexPath.row]
         cell.IconImageView.image = UIImage(data:reversedImagesArray[indexPath.row])
-        
+        cell.indexPath = indexPath
+        let urlstr = reversedURLsArray[indexPath.row]
+        cell.storeURL = NSURL(string: urlstr)!
         return cell
     }
     
+    
+    //tapでストアを開く
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if CheckReachability(host_name: "google.com") {
-        let storeUrl: URL = URL(string: reversedURLsArray[indexPath.row])!
-        if UIApplication.shared.canOpenURL(storeUrl){
-            UIApplication.shared.open(storeUrl, options: [:])
-        }
+            let storeUrl: URL = URL(string: reversedURLsArray[indexPath.row])!
+            if UIApplication.shared.canOpenURL(storeUrl){
+                UIApplication.shared.open(storeUrl, options: [:])
+            }
         }else{
-            let alertController = UIAlertController(title: "インターネット未接続", message: "本アプリはインターネットに\n接続されていない状態で\n使用することは出来ません。", preferredStyle: .alert)
+            //ネットに接続されていない時
+            let alertController = UIAlertController(title: NSLocalizedString("alertTitle", comment: ""), message: NSLocalizedString("internet", comment: ""), preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
             

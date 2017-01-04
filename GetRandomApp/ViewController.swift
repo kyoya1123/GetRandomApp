@@ -8,17 +8,21 @@
 
 import UIKit
 import Kanna
-import CoreActionSheetPicker
+import Accounts
+import ActionSheetPicker_3_0
 
 let save: UserDefaults = UserDefaults.standard
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController{
     
+    @IBOutlet var backgroundLabel: UILabel!
     @IBOutlet var appIconImageView: UIImageView!
     @IBOutlet var appTitleLabel: UILabel!
     @IBOutlet var searchBtn: UIButton!
     @IBOutlet var showBtn: UIButton!
     @IBOutlet var selectBtn: UIButton!
+    @IBOutlet var shareBtn: UIBarButtonItem!
     
     var storeURL: URL!
     var pageURL: URL!
@@ -32,15 +36,49 @@ class ViewController: UIViewController {
     var appTitleArray: [String] = []
     var appURLArray: [String] = []
     var dataOfImages: [Data] = []
-    let categoryArray: [String] = ["全てのカテゴリ","ブック","ビジネス","カタログ","教育","エンターテイメント","ファイナンス","フード・ドリンク","ゲーム","ヘルスケア・フィットネス","ライフスタイル","雑誌・新聞","メディカル","ミュージック","ナビゲーション","ニュース","写真・ビデオ","仕事効率化","辞書・辞典・その他","ショッピング","ソーシャルネットワーキング","スポーツ","旅行","ユーティリティ","天気"]
+    let categoryArray: [String] = [
+        NSLocalizedString("allCategories", comment: ""),
+        NSLocalizedString("category1", comment: ""),
+        NSLocalizedString("category2", comment: ""),
+        NSLocalizedString("category3", comment: ""),
+        NSLocalizedString("category4", comment: ""),
+        NSLocalizedString("category5", comment: ""),
+        NSLocalizedString("category6", comment: ""),
+        NSLocalizedString("category7", comment: ""),
+        NSLocalizedString("category8", comment: ""),
+        NSLocalizedString("category9", comment: ""),
+        NSLocalizedString("category10", comment: ""),
+        NSLocalizedString("category11", comment: ""),
+        NSLocalizedString("category12", comment: ""),
+        NSLocalizedString("category13", comment: ""),
+        NSLocalizedString("category14", comment: ""),
+        NSLocalizedString("category15", comment: ""),
+        NSLocalizedString("category16", comment: ""),
+        NSLocalizedString("category17", comment: ""),
+        NSLocalizedString("category18", comment: ""),
+        NSLocalizedString("category19", comment: ""),
+        NSLocalizedString("category20", comment: ""),
+        NSLocalizedString("category21", comment: ""),
+        NSLocalizedString("category22", comment: ""),
+        NSLocalizedString("category23", comment: ""),
+        NSLocalizedString("category24", comment: ""),
+        ]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //UI
+        backgroundLabel.layer.cornerRadius = 20
+        backgroundLabel.layer.borderColor = UIColor.lightGray.cgColor
+        backgroundLabel.layer.borderWidth = 0.5
+        backgroundLabel.layer.masksToBounds = true
         
         appTitleLabel.numberOfLines = 0
         searchBtn.layer.cornerRadius = 10
         showBtn.isEnabled = false
+        shareBtn.isEnabled = false
         
         appIconImageView.layer.borderColor = UIColor.lightGray.cgColor
         appIconImageView.layer.borderWidth = 0.5
@@ -48,6 +86,12 @@ class ViewController: UIViewController {
         appIconImageView.layer.masksToBounds = true
         
         appTitleLabel.adjustsFontSizeToFitWidth = true
+        
+        self.navigationItem.title = NSLocalizedString("title1", comment: "")
+        showBtn.setTitle(NSLocalizedString("appstore", comment: ""), for: UIControlState.normal)
+        selectBtn.setTitle(NSLocalizedString("picker", comment: ""), for: UIControlState.normal)
+        
+        self.selectBtn.contentVerticalAlignment = UIControlContentVerticalAlignment.fill
         
         //データ読み込み
         if save.object(forKey: "images") != nil{
@@ -64,10 +108,13 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if selectBtn.titleLabel?.text == "カテゴリ：未選択"{
+       
+        
+        if selectBtn.titleLabel?.text == NSLocalizedString("picker", comment: ""){
             searchBtn.isEnabled = false
             searchBtn.backgroundColor = UIColor(red:0.82, green:0.82, blue:0.82, alpha:1.00)
         }
+        
         
     }
     
@@ -76,73 +123,77 @@ class ViewController: UIViewController {
     @IBAction func search(){
         
         if CheckReachability(host_name: "google.com") {
-
-        searchBtn.isEnabled = false
-        searchBtn.backgroundColor = UIColor(red:0.82, green:0.82, blue:0.82, alpha:1.00)
-        dispatch_async_global {
-            //ページからURL一件取得
-            if self.URLsArray.count != 0{
-                self.URLsArray.removeAll()
-            }
-            if self.index == 0{
-                self.pageURL = self.allCategory()
-            }else{
-                self.pageURL = self.functions[self.index - 1](self)()
-            }
-            let url: URL = self.pageURL
-            let data: Data = try! Data(contentsOf: url)
-            let doc: HTMLDocument = HTML(html: data, encoding: .utf8)!
-            for node in doc.css("div#main div#content div#selectedgenre div#selectedcontent a") {
-                self.URLsArray.append(node["href"]! as String)
-            }
-            print("URL総数は" + String(self.URLsArray.count))
-            var randomUrlRand:Int = Int(arc4random_uniform(UInt32(self.URLsArray.count + 1)))
-            if randomUrlRand == self.URLsArray.count{
-                randomUrlRand -= 1
-            }
-            print("乱数は" + String(randomUrlRand))
-            print(self.URLsArray[randomUrlRand])
-            self.appURLArray.append(self.URLsArray[randomUrlRand])
-            self.storeURL = URL(string:self.URLsArray[randomUrlRand])
             
-            //アプリのアイコン画像のURLを取得
-            let imagesUrl: URL = URL(string: self.URLsArray[randomUrlRand])!
-            let imagesData: Data = try! Data(contentsOf: imagesUrl )
-            let imagesDoc: HTMLDocument = HTML(html: imagesData, encoding: .utf8)!
-            let node = imagesDoc.css("div#main div#desktopContentBlockId div#content div#title h1").first
-            let appTitle: String = (node?.innerHTML)!
-            print("アプリ名は " + appTitle + "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-            for node in imagesDoc.css("div#main div#desktopContentBlockId div#content div#left-stack meta") {
-                self.appImagesURLArray.append(node["content"]!)
-            }
-            
-            let req: NSURLRequest = NSURLRequest(url: URL(string: self.appImagesURLArray[self.appImagesURLArray.count - 1])!)
-            NSURLConnection.sendAsynchronousRequest(req as URLRequest, queue:OperationQueue.main){res, data, err in
-                self.dispatch_async_main {
-                    self.showBtn.isEnabled = true
-                    self.appTitleLabel.text = appTitle
-                    self.appTitleArray.append(appTitle)
-                    let image: UIImage = UIImage(data:data!)!
-                    self.appIconImageView.image = image
-                    self.iconImagesArray.append(image)
-                    if self.iconImagesArray.count >= 30{
-                        self.appTitleArray.remove(at: 0)
-                        self.iconImagesArray.remove(at: 0)
-                        self.appURLArray.remove(at: 0)
+            searchBtn.isEnabled = false
+            selectBtn.isEnabled = false
+            searchBtn.backgroundColor = UIColor(red:0.82, green:0.82, blue:0.82, alpha:1.00)
+            dispatch_async_global {
+                //ページからURL一件取得
+                if self.URLsArray.count != 0{
+                    self.URLsArray.removeAll()
+                }
+                if self.index == 0{
+                    self.pageURL = self.allCategory()
+                }else{
+                    self.pageURL = self.functions[self.index - 1](self)()
+                }
+                let url: URL = self.pageURL
+                let data: Data = try! Data(contentsOf: url)
+                let doc: HTMLDocument = HTML(html: data, encoding: .utf8)!
+                for node in doc.css("div#main div#content div#selectedgenre div#selectedcontent a") {
+                    self.URLsArray.append(node["href"]! as String)
+                }
+                print("URL総数は" + String(self.URLsArray.count))
+                var randomUrlRand:Int = Int(arc4random_uniform(UInt32(self.URLsArray.count + 1)))
+                if randomUrlRand == self.URLsArray.count{
+                    randomUrlRand -= 1
+                }
+                print("乱数は" + String(randomUrlRand))
+                print(self.URLsArray[randomUrlRand])
+                self.appURLArray.append(self.URLsArray[randomUrlRand])
+                self.storeURL = URL(string:self.URLsArray[randomUrlRand])
+                
+                //アプリのアイコン画像のURLを取得
+                let imagesUrl: URL = URL(string: self.URLsArray[randomUrlRand])!
+                let imagesData: Data = try! Data(contentsOf: imagesUrl )
+                let imagesDoc: HTMLDocument = HTML(html: imagesData, encoding: .utf8)!
+                let node = imagesDoc.css("div#main div#desktopContentBlockId div#content div#title h1").first
+                let appTitle: String = (node?.innerHTML)!
+                print("アプリ名は " + appTitle + "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+                for node in imagesDoc.css("div#main div#desktopContentBlockId div#content div#left-stack meta") {
+                    self.appImagesURLArray.append(node["content"]!)
+                }
+                
+                let req: NSURLRequest = NSURLRequest(url: URL(string: self.appImagesURLArray[self.appImagesURLArray.count - 1])!)
+                NSURLConnection.sendAsynchronousRequest(req as URLRequest, queue:OperationQueue.main){res, data, err in
+                    self.dispatch_async_main {
+                        self.showBtn.isEnabled = true
+                        self.selectBtn.isEnabled = true
+                        self.shareBtn.isEnabled = true
+                        self.appTitleLabel.text = appTitle
+                        self.appTitleArray.append(appTitle)
+                        let image: UIImage = UIImage(data:data!)!
+                        self.appIconImageView.image = image
+                        self.iconImagesArray.append(image)
+                        if self.iconImagesArray.count >= 31{
+                            self.appTitleArray.remove(at: 0)
+                            self.iconImagesArray.remove(at: 0)
+                            self.appURLArray.remove(at: 0)
+                        }
+                        self.dataOfImages =  self.iconImagesArray.map {(image) -> Data in
+                            UIImagePNGRepresentation(image)!}
+                        save.set(self.dataOfImages, forKey: "images")
+                        save.set(self.appTitleArray, forKey: "titles")
+                        save.set(self.appURLArray, forKey: "URLs")
+                        self.searchBtn.isEnabled = true
+                        self.searchBtn.backgroundColor = UIColor(red:0.00, green:0.55, blue:0.96, alpha:1.00)
+                        
                     }
-                    self.dataOfImages =  self.iconImagesArray.map {(image) -> Data in
-                        UIImagePNGRepresentation(image)!}
-                    save.set(self.dataOfImages, forKey: "images")
-                    save.set(self.appTitleArray, forKey: "titles")
-                    save.set(self.appURLArray, forKey: "URLs")
-                    self.searchBtn.isEnabled = true
-                    self.searchBtn.backgroundColor = UIColor(red:0.00, green:0.55, blue:0.96, alpha:1.00)
-                    
                 }
             }
-        }
         }else {
-            let alertController = UIAlertController(title: "インターネット未接続", message: "本アプリはインターネットに\n接続されていない状態で\n使用することは出来ません。", preferredStyle: .alert)
+            //ネットに接続されていない時
+            let alertController = UIAlertController(title: NSLocalizedString("alertTitle", comment: ""), message: NSLocalizedString("internet", comment: ""), preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
@@ -154,11 +205,12 @@ class ViewController: UIViewController {
     //storeで見る
     @IBAction func show(){
         if CheckReachability(host_name: "google.com") {
-        if UIApplication.shared.canOpenURL(storeURL){
-            UIApplication.shared.open(storeURL, options: [:])
-        }
+           
+            if UIApplication.shared.canOpenURL(storeURL){
+                UIApplication.shared.open(storeURL, options: [:])
+            }
         }else{
-            let alertController = UIAlertController(title: "インターネット未接続", message: "本アプリはインターネットに\n接続されていない状態で\n使用することは出来ません。", preferredStyle: .alert)
+            let alertController = UIAlertController(title: NSLocalizedString("alertTitle", comment: ""), message: NSLocalizedString("internet", comment: ""), preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
             alertController.addAction(defaultAction)
             
@@ -166,15 +218,49 @@ class ViewController: UIViewController {
             
         }
     }
+    
     //カテゴリの選択
     @IBAction func choice(){
-        ActionSheetStringPicker.show(withTitle: "カテゴリの選択", rows: categoryArray, initialSelection: 1, doneBlock:{picker, values, indexes in
+        ActionSheetStringPicker.show(withTitle: NSLocalizedString("categorySelect", comment: ""), rows: categoryArray, initialSelection: 1, doneBlock:{picker, values, indexes in
             self.searchBtn.backgroundColor = UIColor(red:0.00, green:0.55, blue:0.96, alpha:1.00)
             self.searchBtn.isEnabled = true
             self.index = values
             let str:String = indexes as! String
-            self.selectBtn.setTitle("カテゴリ: " + str, for: UIControlState.normal)
-        }, cancel: {ActionMultipleStringCancelBlock in return}, origin: nil)
+            if str == "Magazines & Newspapers"{
+                self.selectBtn.setTitle(NSLocalizedString("category:", comment: "") + "Magazines", for: UIControlState.normal)
+            }else{
+                self.selectBtn.setTitle(NSLocalizedString("category:", comment: "") + str, for: UIControlState.normal)
+            }
+        }, cancel: {ActionMultipleStringCancelBlock in return}, origin: UIButton())
+    }
+    
+    @IBAction func share() {
+        
+        // 共有する項目
+        let adText = NSLocalizedString("found", comment: "")
+        let shareText = appTitleLabel.text!
+        let shareWebsite = storeURL!
+        let shareImage = appIconImageView.image!
+        
+        let activityItems = [adText, shareText, shareWebsite, shareImage] as [Any]
+        
+        // 初期化処理
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        // 使用しないアクティビティタイプ
+        let excludedActivityTypes = [
+            UIActivityType.print,
+            UIActivityType.assignToContact,
+            UIActivityType.saveToCameraRoll,
+            UIActivityType.addToReadingList,
+            UIActivityType.airDrop,
+            UIActivityType.copyToPasteboard
+        ]
+        
+        activityVC.excludedActivityTypes = excludedActivityTypes
+        
+        // UIActivityViewControllerを表示
+        self.present(activityVC, animated: true, completion: nil)
     }
     
     func allCategory() -> URL{

@@ -7,31 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		850B60531DCA1B1500C4C847 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850B60521DCA1B1500C4C847 /* SystemConfiguration.framework */; };
 		850B605B1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850B605A1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift */; };
 		8531F0851DC4ABF500D47F31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531F0841DC4ABF500D47F31 /* AppDelegate.swift */; };
 		8531F0871DC4ABF500D47F31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531F0861DC4ABF500D47F31 /* ViewController.swift */; };
 		8531F08A1DC4ABF500D47F31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8531F0881DC4ABF500D47F31 /* Main.storyboard */; };
 		8531F08C1DC4ABF500D47F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8531F08B1DC4ABF500D47F31 /* Assets.xcassets */; };
-		854613511DC4AF1100ACF869 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8531F0971DC4AD4000D47F31 /* Kanna.framework */; };
-		854613521DC4AF1100ACF869 /* Kanna.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8531F0971DC4AD4000D47F31 /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		854613561DC4B04900ACF869 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854613541DC4B04900ACF869 /* RecentTableViewCell.swift */; };
 		854613571DC4B04900ACF869 /* RecentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 854613551DC4B04900ACF869 /* RecentTableViewCell.xib */; };
 		854613591DC4B05F00ACF869 /* RecentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854613581DC4B05F00ACF869 /* RecentsViewController.swift */; };
 		8546135B1DC4B16000ACF869 /* nothing.png in Resources */ = {isa = PBXBuildFile; fileRef = 8546135A1DC4B16000ACF869 /* nothing.png */; };
-		8572D2D01DC60DF200779C4F /* CoreActionSheetPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */; };
-		8572D2D11DC60DF200779C4F /* CoreActionSheetPicker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9C2AB1691E0195490085E949 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C2AB16B1E0195490085E949 /* Localizable.strings */; };
+		9C5F000D1DFCECAC0055516D /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F000C1DFCECAC0055516D /* share.png */; };
+		9C5F00231DFCF7790055516D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F001F1DFCF7790055516D /* Default-568h@2x.png */; };
+		9C5F00241DFCF7790055516D /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F00201DFCF7790055516D /* Default-667h@2x.png */; };
+		9C5F00251DFCF7790055516D /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F00211DFCF7790055516D /* Default-736h@3x.png */; };
+		9C5F00261DFCF7790055516D /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5F00221DFCF7790055516D /* StoryboardHelper.swift */; };
+		9C5F00381E0181490055516D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C5F00371E0181490055516D /* GoogleService-Info.plist */; };
+		9CA6FAA01E0CA19A002821C2 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA6FA9F1E0CA19A002821C2 /* GoogleToolboxForMac.framework */; };
+		9CA6FAA41E0CA1BA002821C2 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA6FA9F1E0CA19A002821C2 /* GoogleToolboxForMac.framework */; };
+		DD024CDAFDC6E1AC37AB8672 /* Pods_GetRandomApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03471D107779AD8908B3BBEA /* Pods_GetRandomApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		854613531DC4AF1100ACF869 /* Embed Frameworks */ = {
+		9C79E9371E0C2A8B00A470E0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				854613521DC4AF1100ACF869 /* Kanna.framework in Embed Frameworks */,
-				8572D2D11DC60DF200779C4F /* CoreActionSheetPicker.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03471D107779AD8908B3BBEA /* Pods_GetRandomApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetRandomApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		850B60521DCA1B1500C4C847 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		850B605A1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckReachabilityViewController.swift; sourceTree = "<group>"; };
 		8531F0811DC4ABF500D47F31 /* GetRandomApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetRandomApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,12 +51,21 @@
 		8531F0891DC4ABF500D47F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8531F08B1DC4ABF500D47F31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8531F0901DC4ABF500D47F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8531F0971DC4AD4000D47F31 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 		854613541DC4B04900ACF869 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
 		854613551DC4B04900ACF869 /* RecentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecentTableViewCell.xib; sourceTree = "<group>"; };
 		854613581DC4B05F00ACF869 /* RecentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentsViewController.swift; sourceTree = "<group>"; };
 		8546135A1DC4B16000ACF869 /* nothing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nothing.png; sourceTree = "<group>"; };
-		8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreActionSheetPicker.framework; path = Carthage/Build/iOS/CoreActionSheetPicker.framework; sourceTree = "<group>"; };
+		9C2AB16A1E0195490085E949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C2AB16C1E0195860085E949 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C5F000C1DFCECAC0055516D /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		9C5F001F1DFCF7790055516D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9C5F00201DFCF7790055516D /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		9C5F00211DFCF7790055516D /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		9C5F00221DFCF7790055516D /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
+		9C5F00371E0181490055516D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9CA6FA9F1E0CA19A002821C2 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		A63A547B45FD0389BBD82CC4 /* Pods-GetRandomApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRandomApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GetRandomApp/Pods-GetRandomApp.release.xcconfig"; sourceTree = "<group>"; };
+		D9E44A03F841CE1767875EB2 /* Pods-GetRandomApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetRandomApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GetRandomApp/Pods-GetRandomApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,21 +73,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				850B60531DCA1B1500C4C847 /* SystemConfiguration.framework in Frameworks */,
-				854613511DC4AF1100ACF869 /* Kanna.framework in Frameworks */,
-				8572D2D01DC60DF200779C4F /* CoreActionSheetPicker.framework in Frameworks */,
+				9CA6FAA41E0CA1BA002821C2 /* GoogleToolboxForMac.framework in Frameworks */,
+				DD024CDAFDC6E1AC37AB8672 /* Pods_GetRandomApp.framework in Frameworks */,
+				9CA6FAA01E0CA19A002821C2 /* GoogleToolboxForMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EC8E069E621AAEC191F9F42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9E44A03F841CE1767875EB2 /* Pods-GetRandomApp.debug.xcconfig */,
+				A63A547B45FD0389BBD82CC4 /* Pods-GetRandomApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8531F0781DC4ABF500D47F31 = {
 			isa = PBXGroup;
 			children = (
+				9C5F001E1DFCF7790055516D /* Defaults */,
 				8531F0831DC4ABF500D47F31 /* GetRandomApp */,
 				8531F0821DC4ABF500D47F31 /* Products */,
 				8531F0961DC4AD4000D47F31 /* Frameworks */,
+				5EC8E069E621AAEC191F9F42 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,15 +113,18 @@
 		8531F0831DC4ABF500D47F31 /* GetRandomApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C2AB16B1E0195490085E949 /* Localizable.strings */,
 				8546135A1DC4B16000ACF869 /* nothing.png */,
+				9C5F000C1DFCECAC0055516D /* share.png */,
+				850B605A1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift */,
 				8531F0841DC4ABF500D47F31 /* AppDelegate.swift */,
 				8531F0861DC4ABF500D47F31 /* ViewController.swift */,
 				854613581DC4B05F00ACF869 /* RecentsViewController.swift */,
-				850B605A1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift */,
 				854613541DC4B04900ACF869 /* RecentTableViewCell.swift */,
 				854613551DC4B04900ACF869 /* RecentTableViewCell.xib */,
 				8531F0881DC4ABF500D47F31 /* Main.storyboard */,
 				8531F08B1DC4ABF500D47F31 /* Assets.xcassets */,
+				9C5F00371E0181490055516D /* GoogleService-Info.plist */,
 				8531F0901DC4ABF500D47F31 /* Info.plist */,
 			);
 			path = GetRandomApp;
@@ -106,11 +133,22 @@
 		8531F0961DC4AD4000D47F31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CA6FA9F1E0CA19A002821C2 /* GoogleToolboxForMac.framework */,
 				850B60521DCA1B1500C4C847 /* SystemConfiguration.framework */,
-				8572D2CF1DC60DF200779C4F /* CoreActionSheetPicker.framework */,
-				8531F0971DC4AD4000D47F31 /* Kanna.framework */,
+				03471D107779AD8908B3BBEA /* Pods_GetRandomApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C5F001E1DFCF7790055516D /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				9C5F001F1DFCF7790055516D /* Default-568h@2x.png */,
+				9C5F00201DFCF7790055516D /* Default-667h@2x.png */,
+				9C5F00211DFCF7790055516D /* Default-736h@3x.png */,
+				9C5F00221DFCF7790055516D /* StoryboardHelper.swift */,
+			);
+			path = Defaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,11 +158,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8531F0931DC4ABF500D47F31 /* Build configuration list for PBXNativeTarget "GetRandomApp" */;
 			buildPhases = (
+				5ED84482DB4182D5F1577516 /* [CP] Check Pods Manifest.lock */,
 				8531F07D1DC4ABF500D47F31 /* Sources */,
 				8531F07E1DC4ABF500D47F31 /* Frameworks */,
 				8531F07F1DC4ABF500D47F31 /* Resources */,
 				8531F0991DC4AD4F00D47F31 /* ShellScript */,
-				854613531DC4AF1100ACF869 /* Embed Frameworks */,
+				2BE414C021AA8EE1E6E047BF /* [CP] Embed Pods Frameworks */,
+				9C79E9371E0C2A8B00A470E0 /* Embed Frameworks */,
+				121603750DF93AF2EAD7F464 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,6 +200,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 8531F0781DC4ABF500D47F31;
 			productRefGroup = 8531F0821DC4ABF500D47F31 /* Products */;
@@ -175,30 +217,79 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5F00381E0181490055516D /* GoogleService-Info.plist in Resources */,
 				854613571DC4B04900ACF869 /* RecentTableViewCell.xib in Resources */,
 				8546135B1DC4B16000ACF869 /* nothing.png in Resources */,
+				9C5F00241DFCF7790055516D /* Default-667h@2x.png in Resources */,
+				9C5F00251DFCF7790055516D /* Default-736h@3x.png in Resources */,
+				9C2AB1691E0195490085E949 /* Localizable.strings in Resources */,
+				9C5F000D1DFCECAC0055516D /* share.png in Resources */,
 				8531F08C1DC4ABF500D47F31 /* Assets.xcassets in Resources */,
 				8531F08A1DC4ABF500D47F31 /* Main.storyboard in Resources */,
+				9C5F00231DFCF7790055516D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		121603750DF93AF2EAD7F464 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetRandomApp/Pods-GetRandomApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2BE414C021AA8EE1E6E047BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GetRandomApp/Pods-GetRandomApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED84482DB4182D5F1577516 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		8531F0991DC4AD4F00D47F31 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework ",
-				"$(SRCROOT)/Carthage/Build/iOS/CoreActionSheetPicker.framework ",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -207,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5F00261DFCF7790055516D /* StoryboardHelper.swift in Sources */,
 				8531F0871DC4ABF500D47F31 /* ViewController.swift in Sources */,
 				850B605B1DCA1E5F00C4C847 /* CheckReachabilityViewController.swift in Sources */,
 				854613591DC4B05F00ACF869 /* RecentsViewController.swift in Sources */,
@@ -226,6 +318,16 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		9C2AB16B1E0195490085E949 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C2AB16A1E0195490085E949 /* Base */,
+				9C2AB16C1E0195860085E949 /* ja */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -233,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -251,6 +354,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -283,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -301,6 +406,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kyoya Yamaguchi (YL2364PWD5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -324,34 +430,48 @@
 		};
 		8531F0941DC4ABF500D47F31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9E44A03F841CE1767875EB2 /* Pods-GetRandomApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3X7LEN654Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GetRandomApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kyoya.GetRandomApp;
+				OTHER_SWIFT_FLAGS = "";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-Xfrontend -debug-time-function-bodies";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyoya.GetRandomApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		8531F0951DC4ABF500D47F31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63A547B45FD0389BBD82CC4 /* Pods-GetRandomApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kyoya Yamaguchi (YL2364PWD5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3X7LEN654Y;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = GetRandomApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kyoya.GetRandomApp;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kyoya.GetRandomApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

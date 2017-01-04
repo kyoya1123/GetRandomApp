@@ -1,0 +1,45 @@
+/*
+ Localizable.strings
+ GetRandomApp
+ 
+ Created by Kyoya Yamaguchi on 2016/12/14.
+ Copyright © 2016年 Family Account. All rights reserved.
+ */
+
+"title1" = "Pick up";
+"title2" = "Latest 30 items";
+"internet" = "This application requires an internet connection to use.";
+"alertTitle" = "No internet connection";
+"record" = "No Record";
+"picker" = "Category: Not selected";
+"appstore" = "View in Store";
+"categorySelect" = "Category Selection";
+"category:" = "Category: ";
+"found" = "I found this app by RandomAppPicker. http://prt.nu/1/AppStore\n";
+
+
+"allCategories" = "All categories";
+"category1" = "Books";
+"category2" = "Business";
+"category3" = "Catalogs";
+"category4" = "Education";
+"category5" = "Entertainment";
+"category6" = "Finance";
+"category7" = "Food & Drink";
+"category8" = "Games";
+"category9" = "Health & Fitness";
+"category10" = "Lifestyle";
+"category11" = "Magazines & Newspapers";
+"category12" = "Medical";
+"category13" = "Music";
+"category14" = "Navigation";
+"category15" = "News";
+"category16" = "Photo & Video";
+"category17" = "Productivity";
+"category18" = "Reference";
+"category19" = "Shopping";
+"category20" = "Social Networking";
+"category21" = "Sports";
+"category22" = "Travel";
+"category23" = "Utilities";
+"category24" = "Weather";

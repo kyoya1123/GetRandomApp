@@ -1,0 +1,45 @@
+/*
+ Localizable.strings
+ GetRandomApp
+ 
+ Created by Kyoya Yamaguchi on 2016/12/14.
+ Copyright © 2016年 Family Account. All rights reserved.
+ */
+
+"title1" = "見つける";
+"title2" = "最新30件";
+"internet" = "本アプリはインターネットに\n接続されていない状態\nで使用することは出来ません。";
+"alertTitle" = "インターネット未接続";
+"record" = "履歴はありません";
+"picker" = "カテゴリ：未選択";
+"appstore" = "AppStoreで見る";
+"categorySelect" = "カテゴリの選択";
+"category:" = "カテゴリ：";
+"found" = "ランダムアプリピッカーで見つけました。http://prt.nu/0/AppStore\n";
+
+"allCategories" = "全てのカテゴリ";
+"category1" = "ブック";
+"category2" = "ビジネス";
+"category3" = "カタログ";
+"category4" = "教育";
+"category5" = "エンターテイメント";
+"category6" = "ファイナンス";
+"category7" = "フード・ドリンク";
+"category8" = "ゲーム";
+"category9" = "ヘルスケア・フィットネス";
+"category10" = "ライフスタイル";
+"category11" = "雑誌・新聞";
+"category12" = "メディカル";
+"category13" = "ミュージック";
+"category14" = "ナビゲーション";
+"category15" = "ニュース";
+"category16" = "写真・ビデオ";
+"category17" = "仕事効率化";
+"category18" = "辞書・辞典・その他";
+"category19" = "ショッピング";
+"category20" = "SNS";
+"category21" = "スポーツ";
+"category22" = "旅行";
+"category23" = "ユーティリティ";
+"category24" = "天気";
+
